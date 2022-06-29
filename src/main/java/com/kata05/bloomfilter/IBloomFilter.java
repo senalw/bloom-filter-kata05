@@ -5,8 +5,9 @@ package com.kata05.bloomfilter;
  * configurable bit array size at the same time.
  *
  * @param <T> Type of the BloomFilter.
- *            E.g. BloomFilter<String> bf = new BloomFilter(Integer.MAX_VALUE - 8, hashFunctions);
- *            BloomFilter<Integer> bf = new BloomFilter(Integer.MAX_VALUE - 8, hashFunctions);
+ *            E.g.
+ *            @see BloomFilter<String> bf = new BloomFilter(Integer.MAX_VALUE - 8, hashFunctions);
+ *            @see BloomFilter<Integer> bf = new BloomFilter(Integer.MAX_VALUE - 8, hashFunctions);
  */
 public interface IBloomFilter<T> {
 

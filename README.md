@@ -12,6 +12,8 @@ doesn’t)
 - [Features of the boom filter](#features-of-the-bloom-filter)
 - [Clone Project](#clone-project)
 - [Run Tests](#run-tests)
+- [Build](#build)
+- [Generste Java Doc](#generate-java-doc)
 - [Summary](#summary)
 
 ### Features of the bloom filter
@@ -62,14 +64,31 @@ cd bloom-filter-kata05
 mvn clean test
 ```
 
-- Run tests and generate reports in "${project_home}/target/site/surefire-report.html"
+- Run tests and generate reports in `${project.basedir}/target/site/surefire-report.html`
 ```
 mvn clean test site
 ```
 
+### Build
+Code can be built using below maven command and then can be used as an external library.
+
+Note: .jar file will be stored in `${project.basedir}/target/bloom-filter-kata05-*.jar`
+
+```
+mvn clean package
+```
+
+### Generate Java Doc
+Java doc can be generated to use as an external library.
+
+Below command will generate java doc and stored in `${project.basedir}/target/site/apidocs/index.html`
+```
+ mvn javadoc:javadoc
+```
+
 ### Summary
 <p> 
-This bloom filter implementation is done using open-jdk 17 and uses md5,sha256 and sha512 hashing algorithms
+This bloom filter implementation is done using open-jdk 17 and uses md5, sha256 and sha512 hashing algorithms
 to evaluate words in the dictionary and put them in the right place of the bit array.
 </p>
 <P>

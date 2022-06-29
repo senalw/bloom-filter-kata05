@@ -11,8 +11,16 @@ import java.security.NoSuchAlgorithmException;
 
 public class HashFunction {
 
-    private HashFunction(){}
+    private HashFunction() {
+    }
 
+    /**
+     * Generates integer value based on the passed hashing algorithm. Allowed algorithms are MD5, SHA256 and SHA512
+     *
+     * @param value         {@link String value}
+     * @param hashAlgorithm {@link HashAlgorithm} MD5, SHA256 or SHA512
+     * @return {@link Integer} value
+     */
     public static int getDigestHashFunction(@NotNull String value, HashAlgorithm hashAlgorithm) {
         try {
             MessageDigest messageDigest = MessageDigest.getInstance(hashAlgorithm.toString());
