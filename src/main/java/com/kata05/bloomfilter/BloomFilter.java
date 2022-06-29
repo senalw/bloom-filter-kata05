@@ -5,9 +5,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 import java.util.function.ToIntFunction;
 
-/**
- * @param <T>
- */
 public class BloomFilter<T> implements IBloomFilter<T> {
 
     private final boolean[] array;
